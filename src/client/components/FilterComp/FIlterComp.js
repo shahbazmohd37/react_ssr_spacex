@@ -25,7 +25,7 @@ class FilterComp extends Component {
     const { selected = '' } = this.state;
     return (
       <div className="filterComp" onClick={this.handleFilterButton} key={name}>
-      {list.map((item, index) => {
+      {list.map((item) => {
         return (
           <button key={`${item}_${name}`} className={`${selectedParams === item ? 'selected' : '' }`}>{item}</button>
         );

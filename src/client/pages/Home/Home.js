@@ -19,7 +19,6 @@ class SpaceX extends Component {
   }
   componentDidMount() {
     const queryParams = getQueryStringAsObj();
-    console.log(queryParams);
     if (this.props.spacexData.length !== 0) {
       this.setYearList(this.props.spacexData);
       Object.keys(queryParams).length !== 0 && this.props.fetchCompleteData(queryParams);
@@ -47,18 +46,10 @@ class SpaceX extends Component {
       yearList
     });
   }
-  updateQueryParam = (param) => {
-    // this.setState({
-    //   queryParams: {...this.state.queryParams, ...param}
-    // });
-    // this.props.fetchCompleteData({...this.state.queryParams, ...param});
-  }
   handleFilterClicked = (filterObj) => {
-    console.log('year selected ', filterObj)
     this.setState({
       queryParams: { ...this.state.queryParams, ...filterObj }
     });
-    // const url = new URL(window.location.href);
     const newUrl = addParamToUrl(window.location.href, { ...this.state.queryParams, ...filterObj });
     window.history.pushState({}, '', newUrl);
     this.props.fetchCompleteData({ ...this.state.queryParams, ...filterObj });
@@ -73,11 +64,11 @@ class SpaceX extends Component {
         <div className="card">
           Filters
          <span>Launch Year</span>
-          <FilterComp list={yearList} clickHandler={this.handleFilterClicked} selectedParams={queryParams.launch_year} name={'launch_year'} />
+          <FilterComp list={yearList} clickHandler={this.handleFilterClicked} selectedParams={queryParams.launch_year} name={'launch_year'} key="launch_year" />
           <span>Success Launch</span>
-          <FilterComp list={successLaunch} clickHandler={this.handleFilterClicked} selectedParams={queryParams.launch_success} name={'launch_success'} />
+          <FilterComp list={successLaunch} clickHandler={this.handleFilterClicked} selectedParams={queryParams.launch_success} name={'launch_success'} key="launch_success" />
           <span>Success Landing</span>
-          <FilterComp list={successLanding} clickHandler={this.handleFilterClicked} selectedParams={queryParams.land_success} name={'land_success'} />
+          <FilterComp list={successLanding} clickHandler={this.handleFilterClicked} selectedParams={queryParams.land_success} name={'land_success'} key="land_success" />
           <div>
           </div>
         </div>

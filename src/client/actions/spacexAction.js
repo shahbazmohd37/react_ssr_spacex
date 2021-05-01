@@ -6,7 +6,6 @@ import {
 const SPACE_X_URL = 'https://api.spacexdata.com/v3/launches?limit=100';
 
 export function sendSpaceXData(payload) {
-  console.log('dispatching action ')
   return {
     type: 'SET_SPACE_X_DATA',
     payload,
