@@ -1,0 +1,112 @@
+.homeCon {
+  display: flex;
+  flex-direction: column;
+  background: #f3efef;
+  padding: 0 20px;
+  .heading {
+    font-size: 30px;
+    padding: 10px 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .home {
+    width: 100%;
+    min-height: 100vh;
+    .card {
+      margin: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-height: 26%;
+      img {
+        width: 100%;
+        height: 300px;
+      }
+      .details {
+        span {
+          display: block;
+        }
+      }
+    }
+    .spacexCon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .filterComp {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      button {
+        width: 30%;
+        margin: 5%;
+      }
+      .selected {
+        background: green;
+      }
+    }
+    .detailCon {
+    }
+  }
+}
+@media screen and (min-width: 780px) {
+  .homeCon {
+    .home {
+      display: flex;
+      flex-direction: row;
+      .card {
+        margin: 0;
+        width: 25%;
+        img {
+          height: auto;
+        }
+      }
+      .filterComp {
+        padding: 5px;
+        button {
+          width: 35%;
+          margin: 5%;
+        }
+      }
+      .spacexCon {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 75%;
+        .card {
+          width: 230px;
+          margin: 0 auto 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .homeCon {
+    .home {
+      .card {
+        width: 20%;
+        img {
+          height: auto;
+        }
+      }
+      .filterComp {
+        padding: 5px;
+        button {
+          width: 35%;
+          margin: 5%;
+        }
+      }
+      .spacexCon {
+        width: 80%;
+        .card {
+          margin: 0 auto 10px;
+        }
+      }
+    }
+  }
+}
