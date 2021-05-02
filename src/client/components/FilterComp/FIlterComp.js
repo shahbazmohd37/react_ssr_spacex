@@ -1,6 +1,5 @@
 /* eslint-disable css-modules/no-unused-class */
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 class FilterComp extends Component {
   constructor(props) {
@@ -35,12 +34,4 @@ class FilterComp extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-  }
-};
-
-const mapDispatchToProps = {
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(FilterComp);
+export default FilterComp;

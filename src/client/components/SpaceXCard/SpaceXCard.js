@@ -1,6 +1,5 @@
 /* eslint-disable css-modules/no-unused-class */
 import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
 
 class SpaceXCard extends Component {
   render() {
@@ -32,12 +31,4 @@ class SpaceXCard extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-  }
-};
-
-const mapDispatchToProps = {
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(SpaceXCard);
+export default SpaceXCard;
