@@ -2,8 +2,8 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { fetchCompleteData } from '../../actions/spacexAction';
-import FilterComp from '../../components/FilterComp/FilterComp'
-import SpaceXCard from '../../components/SpaceXCard/SpaceXCard';
+import FilterComp from '../../components/FilterComp/FilterComp.js'
+import SpaceXCard from '../../components/SpaceXCard/SpaceXCard.js';
 import { addParamToUrl, getQueryStringAsObj } from '../../utils/helperUtils';
 import './Home.scss';
 
