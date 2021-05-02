@@ -1,7 +1,5 @@
 .idea
-yarn.lock
 node_modules
 build
 public
-package-lock.json
 .DS_Store
